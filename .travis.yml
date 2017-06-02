@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./gradlew build
+
+notifications:
+  email:
+    recipients:
+      - manuelf.mola@gmail.com
+    on_success: change
+    on_failure: always
