@@ -13,7 +13,9 @@ public class Greeting {
     private String user;
 
     public String greet() {
-        StringBuilder hello = new StringBuilder("Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ")
+        StringBuilder hello = new StringBuilder("Hola, soy ")
+			.append(user)
+			.append(", te saludo desde el bean Greeting ")
                 .append(user)
                 .append("!");
         return hello.toString();
