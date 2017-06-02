@@ -6,10 +6,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @SpringBootApplication
 public class SpringBootConsoleApplication implements CommandLineRunner {
 
+	private static final Logger LOG = LoggerFactory.getLogger(SpringBootConsoleApplication.class);
+	
 	@Autowired
 	private Greeting greeting;
 	
@@ -26,8 +30,8 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-		System.out.println(greet());
-        System.out.println(greeting.greet());
+		LOG.info(greet());
+        LOG.info(greeting.greet());
 
     }
 	
